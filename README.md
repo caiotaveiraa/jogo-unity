@@ -1,71 +1,60 @@
-# Jogo Unity - Projeto GTA-like
+# 🚗 Road of the Dead  
 
-## Descrição do Jogo e Controles
+## 🎮 Descrição do Jogo e Controles  
 
-Este é um jogo desenvolvido na Unity que simula uma experiência GTA-like, com personagens que andam, zumbis que perseguem o jogador e um ambiente interativo.
+Este é um jogo desenvolvido na Unity que possui um **mapa aberto**, onde o jogador controla um carro e deve **eliminar os zumbis antes que eles destruam o veículo**.  
 
-**Controles:**
+**Controles:**  
 
-- **W / S / A / D**: Movimentação do personagem
-- **Mouse**: Controle da câmera
-- **Espaço**: Pular
-- **Esc**: Abrir menu principal
-
----
-
-## História do Jogo
-
-Em uma cidade dominada por zumbis, você controla um personagem tentando sobreviver e escapar dos ataques. Os zumbis patrulham as ruas e perseguem o jogador ao avistá-lo, exigindo atenção e estratégia para sobreviver. A dinâmica do jogo envolve movimentação, perseguição, e combates corpo a corpo.
+- **W / S / A / D**: Movimentação do carro  
+- **Mouse**: Controle da câmera  
+- **Esc**: Abrir menu principal  
+- **Q**: Alternar entre **dia e noite**  
+- **E**: Ligar/desligar o **farol do carro**  
+- **1**: Câmera em **3ª pessoa**  
+- **2**: Câmera **interna (cockpit)**  
+- **3**: Câmera **na roda**  
 
 ---
 
-## Gameplay
+## 📖 História do Jogo  
 
-Veja abaixo um vídeo demonstrativo do jogo em execução:
-
-![Gameplay](link-do-video-ou-gif-aqui)
-
----
-
-## Prints do Jogo
-
-### Menu Principal
-
-![Menu Principal](link-da-imagem-menu-aqui)
-
-### Cena da Cidade
-
-![Cena da Cidade](link-da-imagem-cidade-aqui)
-
-### Personagem e Zumbi em ação
-
-![Personagem e Zumbi](link-da-imagem-personagem-zumbi-aqui)
+Em uma cidade devastada por zumbis, seu único meio de sobrevivência é um carro.  
+Você deve dirigir pelas ruas e **eliminar os zumbis** que tentam destruir o veículo.  
+Gerencie sua estratégia e sobreviva o máximo possível enquanto enfrenta hordas implacáveis.  
 
 ---
 
-## Versionamento e .gitignore
+## 🕹️ Gameplay  
 
-Este projeto utiliza um `.gitignore` configurado para projetos Unity, garantindo que pastas temporárias, caches, e arquivos de build não sejam versionados no GitHub. Isso mantém o repositório leve e limpo.
+Veja abaixo um vídeo demonstrativo do jogo em execução:  
 
----
-
-## Como Rodar o Projeto
-
-1. Clone este repositório
-2. Abra o projeto na Unity (versão recomendada: Unity 2021.3 ou superior)
-3. Abra a cena `SampleScene` para começar
-4. Pressione Play para testar
+![Gameplay](link-do-video-ou-gif-aqui)  
 
 ---
 
-## Contato
+## 📸 Prints do Jogo  
 
-Caio Taveira - [GitHub](https://github.com/caiotaveiraa)
+### Menu Principal  
+![Menu Principal](link-da-imagem-menu-aqui)  
+
+### Cena da Cidade  
+![Cena da Cidade](link-da-imagem-cidade-aqui)  
+
+### Carro e Zumbis em Ação  
+![Carro e Zumbis](link-da-imagem-carro-zumbi-aqui)  
 
 ---
 
-**Observação:** Atualize os links dos vídeos e imagens com os arquivos que você adicionou no repositório!
+## ▶️ Como Rodar o Projeto  
+
+1. Clone este repositório  
+2. Abra o projeto na **Unity 2021.3 ou superior**  
+3. Abra a cena principal do jogo  
+4. Pressione **Play** para começar  
 
 ---
 
-Se quiser, posso ajudar você a hospedar o vídeo e as imagens direto no GitHub para facilitar o uso no README. Quer que eu faça isso?
+## 📬 Contato  
+
+👤 **Caio Taveira**  

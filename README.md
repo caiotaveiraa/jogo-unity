@@ -46,15 +46,6 @@ Veja abaixo um vídeo demonstrativo do jogo em execução:
 
 ---
 
-## ▶️ Como Rodar o Projeto  
-
-1. Clone este repositório  
-2. Abra o projeto na **Unity 2021.3 ou superior**  
-3. Abra a cena principal do jogo  
-4. Pressione **Play** para começar  
-
----
-
 ## 📬 Contato  
 
 👤 **Caio Taveira**  

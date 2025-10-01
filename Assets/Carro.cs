@@ -4,21 +4,33 @@ using UnityEngine;
 
 public class Carro : MonoBehaviour
 {
+    [Header("Rodas")]
     [SerializeField] WheelCollider RodaTraseiraDireita;
     [SerializeField] WheelCollider RodaFrenteDireita;
     [SerializeField] WheelCollider RodaFrenteEsquerda;
     [SerializeField] WheelCollider RodaTraseiraEsquerda;
 
-    public float aceleracao = 500f;
+    [Header("Configuração de Movimento")]
+    public float aceleracao = 900f;
     public float freio = 300f;
-    public float anguloTorque = 15f;
+    public float anguloTorque = 50f;
 
-    [SerializeField] Light luzFreioDireita; // Luz de freio direita
-    [SerializeField] Light luzFreioEsquerda; // Luz de freio esquerda
+    [Header("Luzes de Freio")]
+    [SerializeField] Light luzFreioDireita;
+    [SerializeField] Light luzFreioEsquerda;
+
+    [Header("Vida do Carro")]
+    public float vidaMaxima = 100f;
+    private float vidaAtual;
 
     private float aceleracaoAtual = 0f;
     private float freioAtual = 0f;
     private float anguloTorqueAtual = 0f;
+
+    private void Start()
+    {
+        vidaAtual = vidaMaxima;
+    }
 
     private void FixedUpdate()
     {
@@ -46,11 +58,33 @@ public class Carro : MonoBehaviour
         RodaTraseiraDireita.brakeTorque = freioAtual;
         RodaTraseiraEsquerda.brakeTorque = freioAtual;
 
-        // Acende as luzes de freio apenas enquanto estiver freando
         bool estaFreando = freioAtual > 0f;
         if (luzFreioDireita != null)
             luzFreioDireita.enabled = estaFreando;
         if (luzFreioEsquerda != null)
             luzFreioEsquerda.enabled = estaFreando;
+    }
+
+    // Receber dano do zumbi
+    public void LevarDano(float dano)
+    {
+        vidaAtual -= dano;
+        Debug.Log("Carro levou dano! Vida atual: " + vidaAtual);
+
+        if (vidaAtual <= 0)
+        {
+            Debug.Log("O carro foi destruído!");
+            // Aqui você pode chamar o Game Over ou reiniciar a cena
+        }
+    }
+
+    // Matar zumbi ao colidir
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Zombie"))
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Zumbi atropelado!");
+        }
     }
 }

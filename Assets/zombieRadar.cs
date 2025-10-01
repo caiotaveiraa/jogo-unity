@@ -8,6 +8,8 @@ public class zombieRadar : MonoBehaviour
     public float rotationSpeed = 10f;
     private Animator zombieAnim;
 
+    public float damagePerSecond = 10f; // Dano que o zumbi causa ao carro
+
     void Start()
     {
         zombieAnim = GetComponent<Animator>();
@@ -17,24 +19,20 @@ public class zombieRadar : MonoBehaviour
     {
         if (target != null)
         {
-            // Calcula a direção horizontal ignorando a diferença de altura
             Vector3 direction = target.position - transform.position;
             direction.y = 0;
             direction = direction.normalized;
 
-            // Rotaciona suavemente em direção ao personagem
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
 
-            // Move o zumbi em direção ao personagem
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }
 
-    // Detecta quando o personagem entra no trigger do zumbi
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Personagem"))
+        if (other.CompareTag("PlayerCar"))
         {
             target = other.transform;
             zombieAnim.SetBool("runZombie", true);
@@ -42,14 +40,24 @@ public class zombieRadar : MonoBehaviour
         }
     }
 
-    // Detecta quando o personagem sai do trigger do zumbi
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Personagem"))
+        if (other.CompareTag("PlayerCar"))
         {
             target = null;
             zombieAnim.SetBool("runZombie", false);
             zombieAnim.SetBool("idleZombie", true);
+        }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("PlayerCar"))
+        {
+            Carro carro = collision.gameObject.GetComponent<Carro>();
+            if (carro != null)
+            {
+                carro.LevarDano(damagePerSecond * Time.deltaTime);
+            }
         }
     }
 }

@@ -29,20 +29,20 @@ Gerencie sua estratégia e sobreviva o máximo possível enquanto enfrenta horda
 
 Veja abaixo um vídeo demonstrativo do jogo em execução:  
 
-![Gameplay](link-do-video-ou-gif-aqui)  
+![Gameplay](Imagens/vide_jogo.mp4) 
 
 ---
 
 ## 📸 Prints do Jogo  
 
-### Menu Principal  
-![Menu Principal](link-da-imagem-menu-aqui)  
+### Cidade  
+![Cena da Cidade](Imagens/mapa.png)  
 
-### Cena da Cidade  
-![Cena da Cidade](link-da-imagem-cidade-aqui)  
+### Carro  
+![Carro](Imagens/carro.png)  
 
-### Carro e Zumbis em Ação  
-![Carro e Zumbis](link-da-imagem-carro-zumbi-aqui)  
+### Zumbis  
+![Zumbis](Imagens/zumbi.png)  
 
 ---
 

@@ -29,7 +29,7 @@ Gerencie sua estratégia e sobreviva o máximo possível enquanto enfrenta horda
 
 Veja abaixo um vídeo demonstrativo do jogo em execução:  
 
-![Gameplay](Imagens/vide_jogo.mp4) 
+![Gameplay](Imagens/vide_jogo.gif) 
 
 ---
 
